@@ -7,7 +7,9 @@ public class Werewolf extends Role{
 
     public static void Kill(String[][] player, String name){
         int x = Main.TargetSearch(player, name);
-        player[x][0] = "Death";
-        player[x][1] = "Death";
+        if(x != -1){
+            System.out.println(player[x][0]+" is Killed");
+            player[x][1] = "Killed";
+        }
     }
 }
